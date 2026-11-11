@@ -1,0 +1,379 @@
+.course-banner img{
+    width: 100%;
+    max-height: 400px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+    .course-banner img {
+        min-height: 320px;
+        background-position: center;
+    }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+    .course-banner img {
+        min-height: 220px;
+        background-size: cover;
+        background-position: 60% center;
+    }
+}
+
+/* --- Course Card --- */
+.courseCard-row1 {
+    display: grid;
+    grid-template-columns: repeat(6,minmax(0,1fr));
+    gap: 15px;
+    padding: 10px 20px;
+}
+
+.courseCard-row1 .card {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    text-align: center;
+    background-color: #ffffff;
+    border: 1px solid #e5eaf0;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(3, 62, 132, 0.08);
+}
+
+.courseCard-row1 .card-header,.courseCard-row1 .card-body,.courseCard-row1 .card-footer {
+        border: none;
+        background-color: #ffffff;
+}
+
+.courseCard-row1 .card-header img {
+    width: 100px;
+    height: 80px;
+    object-fit: contain;
+}
+
+.courseCard-row1 .card-body h2 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #033E84;
+}
+
+.courseCard-row1 .card-body p {
+    font-size: 13px;
+    line-height: 1.4;
+    color: #555;
+}
+
+.courseCard-row1 .card-footer a {
+    text-decoration: none;
+    color: #ed001b;
+    font-weight: 600;
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+    .courseCard-row1 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Mobile */
+@media (max-width:576px){
+    .courseCard-row1 {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        padding: 12px;
+    }
+    .courseCard-row1 .card-header img {
+        width: 70px;
+        height: 60px;
+    }
+
+    .courseCard-row1 .card-body h2 {
+        font-size: 14px;
+    }
+
+    .courseCard-row1 .card-body p {
+        font-size: 11px;
+    }
+}
+
+
+/* =================================
+   COURSE CTA BANNER
+================================= */
+
+.course-cta {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.cta-container {
+    width: 100%;
+    max-width: 1400px;
+    min-height: 90px;
+    margin: auto;
+
+    background: linear-gradient(
+        110deg,
+        #e8f4ff,
+        #dceeff
+    );
+
+    border-radius: 9px;
+    padding: 12px 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* =================================
+   GRADUATION IMAGE
+================================= */
+
+.cta-image {
+    width: 175px;
+    min-width: 145px;
+    height: 75px;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cta-image > i {
+    font-size: 75px;
+    color: #102b49;
+    position: relative;
+    z-index: 2;
+
+    filter: drop-shadow(2px 4px 3px rgba(0,0,0,0.2));
+}
+
+/* Diploma */
+
+.diploma {
+    position: absolute;
+    bottom: 0;
+    left: 12px;
+
+    width: 65px;
+    height: 20px;
+
+    background: #ffffff;
+    border-radius: 15px;
+    border: 2px solid #dce5ef;
+
+    transform: rotate(20deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #ed1028;
+    font-size: 17px;
+}
+
+/* =================================
+   CTA CONTENT
+================================= */
+
+.cta-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.cta-subtitle {
+    display: block;
+    color: #ed1028;
+
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 3px;
+
+    margin-bottom: 3px;
+}
+
+.cta-content h2 {
+    font-size: clamp(19px, 2vw, 25px);
+    font-weight: 800;
+
+    color: #092d68;
+    line-height: 1.2;
+
+    margin-bottom: 5px;
+}
+
+.cta-content h2 span {
+    color: #ed1028;
+}
+
+.cta-content p {
+    font-size: 13px;
+    color: #385273;
+    line-height: 1.4;
+    margin: 0;
+}
+
+/* CTA BUTTONS */
+
+.cta-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    flex-shrink: 0;
+}
+
+.cta-buttons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+
+    padding: 13px 17px;
+
+    border-radius: 6px;
+    text-decoration: none;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
+
+/* Enquire Button */
+
+.enquire-btn {
+    background: #ed1028;
+    color: #ffffff;
+    border: 1px solid #ed1028;
+}
+
+.enquire-btn:hover {
+    background: #c9001c;
+    border-color: #c9001c;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+/* Download Button */
+
+.brochure-btn {
+    background: transparent;
+    color: #092d68;
+    border: 1px solid #164a91;
+}
+
+.brochure-btn:hover {
+    background: #164a91;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+.cta-buttons i {
+    font-size: 17px;
+}
+
+/* =================================
+   TABLET RESPONSIVE
+================================= */
+
+@media (max-width: 1000px) {
+
+    .cta-container {
+        flex-wrap: wrap;
+        padding: 18px;
+        gap: 15px;
+    }
+
+    .cta-image {
+        width: 110px;
+        min-width: 100px;
+    }
+
+    .cta-content {
+        flex: 1;
+    }
+
+    .cta-buttons {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* =================================
+   MOBILE RESPONSIVE
+================================= */
+
+@media (max-width: 600px) {
+
+    .course-cta {
+        padding: 10px;
+    }
+
+    .cta-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 15px;
+        gap: 12px;
+    }
+
+    .cta-image {
+        width: 100%;
+        height: 75px;
+    }
+
+    .cta-content {
+        width: 100%;
+    }
+
+    .cta-content h2 {
+        font-size: 21px;
+    }
+
+    .cta-content p {
+        font-size: 12px;
+    }
+
+    .cta-subtitle {
+        font-size: 10px;
+    }
+
+    .cta-buttons {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .cta-buttons a {
+        width: 100%;
+        padding: 12px;
+    }
+}
+
+/* =================================
+   SMALL MOBILE
+================================= */
+
+@media (max-width: 350px) {
+
+    .cta-content h2 {
+        font-size: 18px;
+    }
+
+    .cta-content p {
+        font-size: 11px;
+    }
+
+}
+section {
+    margin-bottom: 10px;
+}
